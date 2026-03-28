@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>瑛彌 翔弛 | Shoji Teruya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#top" class="nav-logo">
+      <span class="ja">瑛彌 翔弛</span>
+      <span class="en hidden">Shoji Teruya</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about"   data-ja="について"  data-en="About">について</a></li>
+      <li><a href="#works"   data-ja="作品"      data-en="Works">作品</a></li>
+      <li><a href="#contact" data-ja="連絡"      data-en="Contact">連絡</a></li>
+      <li><button id="lang-toggle" aria-label="言語切替">EN</button></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="hero-bg">
+      <img src="images/hero.jpg" alt="" aria-hidden="true">
+    </div>
+    <div class="hero-content">
+      <p class="hero-sub ja" data-ja="詩 · 小説 · 写真 · 漆芸">詩 · 小説 · 写真 · 漆芸</p>
+      <p class="hero-sub en hidden" data-en="Poetry · Fiction · Photography · Lacquer Art">Poetry · Fiction · Photography · Lacquer Art</p>
+      <h1 class="hero-name">
+        <span class="ja">瑛彌 翔弛</span>
+        <span class="en hidden">Shoji Teruya</span>
+      </h1>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="下へスクロール">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">
+        <span class="ja" data-ja="について">について</span>
+        <span class="en hidden" data-en="About">About</span>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-photo">
+          <img src="images/profile.jpg" alt="瑛彌 翔弛" class="profile-img">
+        </div>
+        <div class="about-body">
+          <h2 class="about-name">
+            <span class="ja">瑛彌 翔弛</span>
+            <span class="en hidden">Shoji Teruya</span>
+          </h2>
+          <div class="about-text">
+            <p class="ja">
+              言葉と物質、沈黙と表面。<br>
+              四つの異なる媒体を通じて、<br>
+              見えないものの形を探し続けている。
+            </p>
+            <p class="en hidden">
+              Words and matter, silence and surface.<br>
+              Through four distinct mediums,<br>
+              a continuous search for the shape of the invisible.
+            </p>
+          </div>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label ja">活動拠点</span>
+              <span class="meta-label en hidden">Based in</span>
+              <span class="meta-value ja">—</span>
+              <span class="meta-value en hidden">—</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label ja">受賞・掲載</span>
+              <span class="meta-label en hidden">Awards</span>
+              <span class="meta-value ja">—</span>
+              <span class="meta-value en hidden">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section id="works" class="section section--works">
+    <div class="container">
+      <div class="works-header">
+        <div class="section-label">
+          <span class="ja">作品</span>
+          <span class="en hidden">Works</span>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-category="all"     data-ja="すべて"  data-en="All">すべて</button>
+          <button class="tab"        data-category="poetry"  data-ja="詩"      data-en="Poetry">詩</button>
+          <button class="tab"        data-category="fiction" data-ja="小説"    data-en="Fiction">小説</button>
+          <button class="tab"        data-category="photo"   data-ja="写真"    data-en="Photo">写真</button>
+          <button class="tab"        data-category="lacquer" data-ja="漆芸"    data-en="Lacquer">漆芸</button>
+        </div>
+      </div>
+
+      <div class="works-grid" id="works-grid">
+
+        <!-- Poetry — large tile -->
+        <article class="work-card work-card--text work-card--large reveal" data-category="poetry">
+          <div class="card-inner">
+            <div class="card-media">
+              <div class="text-preview">
+                <p class="ja">夜の縁に<br>指を置く<br>光はまだ<br>名前を持たない</p>
+                <p class="en hidden">At the edge of night<br>I rest a finger—<br>the light has not yet<br>been given a name</p>
+              </div>
+            </div>
+            <div class="card-overlay">
+              <span class="overlay-category ja">詩</span>
+              <span class="overlay-category en hidden">Poetry</span>
+              <h3 class="overlay-title">
+                <span class="ja">夜の縁</span>
+                <span class="en hidden">Edge of Night</span>
+              </h3>
+              <span class="overlay-year">2024</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 1 — large tile -->
+        <article class="work-card work-card--large reveal" data-category="photo">
+          <div class="card-inner">
+            <div class="card-media">
+              <div class="img-placeholder">Image</div>
+            </div>
+            <div class="card-overlay">
+              <span class="overlay-category ja">写真</span>
+              <span class="overlay-category en hidden">Photography</span>
+              <h3 class="overlay-title">
+                <span class="ja">作品タイトル</span>
+                <span class="en hidden">Work Title</span>
+              </h3>
+              <span class="overlay-year">2024</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lacquer 1 -->
+        <article class="work-card reveal" data-category="lacquer">
+          <div class="card-inner">
+            <div class="card-media">
+              <div class="img-placeholder">Image</div>
+            </div>
+            <div class="card-overlay">
+              <span class="overlay-category ja">漆芸</span>
+              <span class="overlay-category en hidden">Lacquer Art</span>
+              <h3 class="overlay-title">
+                <span class="ja">作品タイトル</span>
+                <span class="en hidden">Work Title</span>
+              </h3>
+              <span class="overlay-year">2024</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Photo 2 -->
+        <article class="work-card reveal" data-category="photo">
+          <div class="card-inner">
+            <div class="card-media">
+              <div class="img-placeholder">Image</div>
+            </div>
+            <div class="card-overlay">
+              <span class="overlay-category ja">写真</span>
+              <span class="overlay-category en hidden">Photography</span>
+              <h3 class="overlay-title">
+                <span class="ja">作品タイトル</span>
+                <span class="en hidden">Work Title</span>
+              </h3>
+              <span class="overlay-year">2023</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fiction -->
+        <article class="work-card work-card--text reveal" data-category="fiction">
+          <div class="card-inner">
+            <div class="card-media">
+              <div class="text-preview text-preview--prose">
+                <p class="ja">小説の冒頭文や<br>あらすじが入ります。</p>
+                <p class="en hidden">An excerpt or synopsis<br>of the novel goes here.</p>
+              </div>
+            </div>
+            <div class="card-overlay">
+              <span class="overlay-category ja">小説</span>
+              <span class="overlay-category en hidden">Fiction</span>
+              <h3 class="overlay-title">
+                <span class="ja">作品タイトル</span>
+                <span class="en hidden">Work Title</span>
+              </h3>
+              <span class="overlay-year">2023</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lacquer 2 -->
+        <article class="work-card reveal" data-category="lacquer">
+          <div class="card-inner">
+            <div class="card-media">
+              <div class="img-placeholder">Image</div>
+            </div>
+            <div class="card-overlay">
+              <span class="overlay-category ja">漆芸</span>
+              <span class="overlay-category en hidden">Lacquer Art</span>
+              <h3 class="overlay-title">
+                <span class="ja">作品タイトル</span>
+                <span class="en hidden">Work Title</span>
+              </h3>
+              <span class="overlay-year">2022</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="section-label">
+          <span class="ja">連絡</span>
+          <span class="en hidden">Contact</span>
+        </div>
+        <h2 class="contact-heading">
+          <span class="ja">お問い合わせ</span>
+          <span class="en hidden">Get in Touch</span>
+        </h2>
+        <p class="contact-lead ja">展示・出版・その他のご依頼はこちらから。</p>
+        <p class="contact-lead en hidden">For exhibitions, publications, and other inquiries.</p>
+        <a href="mailto:your@email.com" class="contact-email">your@email.com</a>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <span class="social-divider">/</span>
+          <a href="#" class="social-link">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="ja">© 2024 瑛彌 翔弛. All rights reserved.</p>
+    <p class="en hidden">© 2024 Shoji Teruya. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
