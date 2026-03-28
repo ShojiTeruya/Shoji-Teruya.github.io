@@ -15,9 +15,11 @@ function setLang(lang) {
     el.classList.toggle('hidden', lang !== 'en');
   });
 
-  // Update tab labels
-  document.querySelectorAll('.tab[data-ja][data-en]').forEach(el => {
-    el.textContent = lang === 'ja' ? el.dataset.ja : el.dataset.en;
+  // Update elements with data-ja/data-en that have no .ja/.en children
+  document.querySelectorAll('[data-ja][data-en]').forEach(el => {
+    if (!el.querySelector('.ja, .en')) {
+      el.textContent = lang === 'ja' ? el.dataset.ja : el.dataset.en;
+    }
   });
 }
 
