@@ -572,6 +572,7 @@ body {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .about-photo { display: none; }
   .about-photo .img-placeholder { aspect-ratio: 1/1; max-width: 220px; }
 
   .works-header { flex-direction: column; }
