@@ -224,6 +224,16 @@ body {
   background: var(--border);
 }
 
+/* About page top padding (no hero above) */
+.section--about-page {
+  padding-top: calc(var(--nav-h) + 80px);
+}
+
+/* About page: always show photo */
+.section--about-page .about-photo {
+  display: block !important;
+}
+
 /* ── About ── */
 .about-grid {
   display: grid;
