@@ -8,32 +8,31 @@ public_folder: "/images"
 locale: ja
 
 collections:
-  - name: "works"
-    label: "作品"
-    label_singular: "作品"
-    folder: "_works"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "タイトル（日本語）", name: "title_ja", widget: "string" }
-      - { label: "タイトル（英語）", name: "title_en", widget: "string" }
-      - label: "カテゴリ"
-        name: "category"
-        widget: "select"
-        options:
-          - { label: "詩", value: "poetry" }
-          - { label: "小説", value: "fiction" }
-          - { label: "写真", value: "photo" }
-          - { label: "漆芸", value: "lacquer" }
-      - { label: "年", name: "year", widget: "number", default: 2026 }
-      - { label: "画像", name: "image", widget: "image", required: false }
-      - { label: "大タイル（2倍サイズ）", name: "large", widget: "boolean", default: false, required: false }
-      - label: "テキストプレビュー（詩・小説のみ）"
-        name: "text_preview_ja"
-        widget: "text"
-        required: false
-        hint: "詩や小説の場合、カードに表示する本文を入力"
-      - label: "テキストプレビュー（英語）"
-        name: "text_preview_en"
-        widget: "text"
-        required: false
+  - name: "content"
+    label: "コンテンツ"
+    files:
+      - name: "works"
+        label: "作品一覧"
+        file: "data/works.json"
+        format: json
+        fields:
+          - label: "作品"
+            name: "works"
+            widget: "list"
+            summary: "{{fields.title_ja}}"
+            fields:
+              - { label: "タイトル（日本語）", name: "title_ja", widget: "string" }
+              - { label: "タイトル（英語）", name: "title_en", widget: "string" }
+              - label: "カテゴリ"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "詩", value: "poetry" }
+                  - { label: "小説", value: "fiction" }
+                  - { label: "写真", value: "photo" }
+                  - { label: "漆芸", value: "lacquer" }
+              - { label: "年", name: "year", widget: "number", default: 2026 }
+              - { label: "画像", name: "image", widget: "image", required: false }
+              - { label: "大タイル（2倍サイズ）", name: "large", widget: "boolean", default: false }
+              - { label: "テキストプレビュー（詩・小説）日本語", name: "text_preview_ja", widget: "text", required: false }
+              - { label: "テキストプレビュー（詩・小説）英語", name: "text_preview_en", widget: "text", required: false }
