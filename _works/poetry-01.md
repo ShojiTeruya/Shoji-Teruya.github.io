@@ -1,0 +1,9 @@
+---
+title_ja: "夜の縁に"
+title_en: "At the Edge of Night"
+category: "poetry"
+year: 2026
+large: true
+text_preview_ja: "夜の縁に\n指を置く\n光はまだ\n名前を持たない"
+text_preview_en: "At the edge of night\nI rest a finger—\nthe light has not yet\nbeen given a name"
+---
