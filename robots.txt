@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shojiteruya.github.io/null/sitemap.xml
+Sitemap: https://shoji-null.art/sitemap.xml
