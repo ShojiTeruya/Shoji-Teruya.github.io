@@ -1,3 +1,64 @@
+/* ── Fog Intro Animation ── */
+#fog-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.fog-layer {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    rgba(249,248,246,0.98) 0%,
+    rgba(249,248,246,0.85) 30%,
+    rgba(249,248,246,0.5) 60%,
+    rgba(249,248,246,0) 100%
+  );
+}
+
+.fog-1 {
+  animation: fogDrift1 3.8s cubic-bezier(0.4,0,0.6,1) forwards;
+}
+.fog-2 {
+  animation: fogDrift2 4.4s cubic-bezier(0.4,0,0.6,1) 0.2s forwards;
+  opacity: 0.75;
+}
+.fog-3 {
+  animation: fogDrift3 5s cubic-bezier(0.4,0,0.6,1) 0.4s forwards;
+  opacity: 0.5;
+}
+
+@keyframes fogDrift1 {
+  0%   { transform: translate(0, 0) scale(1.2);   opacity: 1; }
+  70%  { opacity: 0.6; }
+  100% { transform: translate(-10%, -6%) scale(1.6); opacity: 0; }
+}
+@keyframes fogDrift2 {
+  0%   { transform: translate(0, 0) scale(1.1);   opacity: 0.75; }
+  70%  { opacity: 0.4; }
+  100% { transform: translate(8%, 5%) scale(1.5);  opacity: 0; }
+}
+@keyframes fogDrift3 {
+  0%   { transform: translate(0, 0) scale(1.3);   opacity: 0.5; }
+  70%  { opacity: 0.2; }
+  100% { transform: translate(-4%, 8%) scale(1.7); opacity: 0; }
+}
+
+/* コンテンツ側のブラー解除 */
+body.fog-active {
+  filter: blur(12px);
+  transition: filter 3.2s cubic-bezier(0.4,0,0.2,1);
+}
+body.fog-clear {
+  filter: blur(0);
+}
+
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

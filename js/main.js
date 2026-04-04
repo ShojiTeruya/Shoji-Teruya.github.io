@@ -1,3 +1,23 @@
+// ── Fog Intro ──
+(function() {
+  const fog = document.getElementById('fog-intro');
+  if (!fog) return;
+
+  // bodyにブラーをかけた状態でスタート
+  document.body.classList.add('fog-active');
+
+  // 少し遅らせてブラーを解除（霧が晴れる感じに同期）
+  setTimeout(() => {
+    document.body.classList.add('fog-clear');
+  }, 300);
+
+  // アニメーション終了後にfog要素を削除
+  setTimeout(() => {
+    fog.remove();
+    document.body.classList.remove('fog-active', 'fog-clear');
+  }, 5500);
+})();
+
 // ── Language toggle ──
 const htmlEl = document.documentElement;
 const langBtn = document.getElementById('lang-toggle');
