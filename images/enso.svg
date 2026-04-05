@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <filter id="brush" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="4" seed="6" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <!-- 円相 — 約300度の弧、上部に開口 -->
+  <path d="M 44 9 A 41 41 0 1 1 70 18"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="9"
+        stroke-linecap="round"
+        filter="url(#brush)"/>
+  <!-- 筆の掠れ・濃淡を表現する薄い補助ストローク -->
+  <path d="M 44 9 A 40 40 0 1 1 69 17"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="4"
+        stroke-linecap="round"
+        opacity="0.35"
+        filter="url(#brush)"/>
+</svg>

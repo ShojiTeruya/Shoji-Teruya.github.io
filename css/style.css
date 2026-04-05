@@ -134,14 +134,21 @@ body {
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
   text-decoration: none;
   color: var(--fg);
   transition: color 0.3s;
+  display: flex;
+  align-items: center;
 }
+
+.nav-enso {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: opacity 0.3s;
+}
+.nav-logo:hover .nav-enso { opacity: 0.5; }
 
 .nav-links {
   display: flex;
