@@ -81,6 +81,7 @@ body.fog-clear {
   --accent:    #1c1c1a;
   --nav-h:     72px;
   --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-ja:    'Shippori Mincho', 'Hiragino Mincho ProN', serif;
   --font-sans:  'Inter', system-ui, sans-serif;
   --ease:       cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -230,6 +231,12 @@ body {
   margin-bottom: 28px;
   font-style: italic;
 }
+.hero-copy.ja {
+  font-family: var(--font-ja);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+}
 
 .hero-sub {
   font-size: 0.72rem;
@@ -341,7 +348,7 @@ body {
 }
 
 .about-name {
-  font-family: var(--font-serif);
+  font-family: var(--font-ja);
   font-size: 2.6rem;
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -357,7 +364,7 @@ body {
 }
 
 .about-text p {
-  font-family: var(--font-serif);
+  font-family: var(--font-ja);
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 2.2;
@@ -502,7 +509,7 @@ body {
 }
 
 .text-preview p {
-  font-family: var(--font-serif);
+  font-family: var(--font-ja);
   font-size: 1.1rem;
   font-weight: 300;
   line-height: 2.2;
@@ -558,7 +565,7 @@ body {
   margin-bottom: 6px;
 }
 .overlay-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-ja);
   font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: 0.05em;
@@ -581,7 +588,7 @@ body {
 .contact-inner { text-align: center; }
 
 .contact-heading {
-  font-family: var(--font-serif);
+  font-family: var(--font-ja);
   font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 300;
   letter-spacing: 0.1em;
