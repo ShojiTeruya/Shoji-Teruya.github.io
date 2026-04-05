@@ -224,31 +224,31 @@ body {
 
 .hero-copy {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
   font-weight: 300;
   letter-spacing: 0.18em;
   color: rgba(30,28,26,0.55);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-style: italic;
 }
 .hero-copy.ja {
   font-family: var(--font-ja);
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.24em;
 }
 
 .hero-sub {
-  font-size: 0.72rem;
-  letter-spacing: 0.28em;
+  font-size: 0.66rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: rgba(30,28,26,0.45);
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .hero-name {
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 7.5vw, 6rem);
+  font-size: clamp(1.4rem, 3.8vw, 3rem);
   font-weight: 400;
   letter-spacing: 0.14em;
   line-height: 1.15;
