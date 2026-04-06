@@ -37,7 +37,9 @@ function setLang(lang) {
 
   // Update elements with data-ja/data-en that have no .ja/.en children
   document.querySelectorAll('[data-ja][data-en]').forEach(el => {
-    if (!el.querySelector('.ja, .en')) {
+    if (el.tagName === 'META') {
+      el.setAttribute('content', lang === 'ja' ? el.dataset.ja : el.dataset.en);
+    } else if (!el.querySelector('.ja, .en')) {
       el.textContent = lang === 'ja' ? el.dataset.ja : el.dataset.en;
     }
   });
