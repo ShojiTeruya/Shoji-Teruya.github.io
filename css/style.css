@@ -720,7 +720,6 @@ body {
   transition: color 0.2s;
 }
 .social-link:hover { color: #f0ede7; }
-.social-divider { color: #3a3832; font-size: 0.8rem; }
 
 /* ── Modal ── */
 .modal {
@@ -814,7 +813,6 @@ body {
 }
 .modal-text--prose { background: #f3f1ec; }
 .modal-text--prose p { color: #5a5650; }
-.modal-text--prose p.en { font-family: var(--font-serif); }
 
 .modal-footer {
   display: flex;

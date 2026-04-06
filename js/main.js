@@ -210,7 +210,6 @@ async function renderWorks() {
       article.dataset.category = work.category;
       article.className = [
         'work-card',
-        isText ? 'work-card--text' : '',
         work.large ? 'work-card--large' : '',
         'reveal'
       ].filter(Boolean).join(' ');
