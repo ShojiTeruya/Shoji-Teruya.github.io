@@ -675,7 +675,7 @@ body {
 
 .contact-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(1rem, 2.5vw, 1.9rem);
   font-weight: 300;
   letter-spacing: 0.1em;
   margin-bottom: 24px;
