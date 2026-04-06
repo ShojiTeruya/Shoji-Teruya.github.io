@@ -100,6 +100,54 @@ const categoryLabels = {
   lacquer: { ja: '漆芸', en: 'Urushi' }
 };
 
+// ── Modal ──
+const modal     = document.getElementById('modal');
+const modalMedia = document.getElementById('modal-media');
+const modalCat  = document.getElementById('modal-cat');
+const modalTitleEl = document.getElementById('modal-title-el');
+const modalYearEl  = document.getElementById('modal-year-el');
+
+function openModal(work) {
+  const labels  = categoryLabels[work.category] || { ja: '', en: '' };
+  const isText  = (work.category === 'poetry' || work.category === 'fiction') && work.text_preview_ja;
+  const isProse = work.category === 'fiction';
+
+  // Media
+  if (isText) {
+    const jaLines = (work.text_preview_ja || '').replace(/\n/g, '<br>');
+    const enLines = (work.text_preview_en || '').replace(/\n/g, '<br>');
+    modalMedia.innerHTML = `<div class="modal-text${isProse ? ' modal-text--prose' : ''}">
+      <p class="ja">${jaLines}</p>
+      <p class="en hidden">${enLines}</p>
+    </div>`;
+  } else if (work.image) {
+    modalMedia.innerHTML = `<img src="${work.image}" alt="${work.title_ja}">`;
+  } else {
+    modalMedia.innerHTML = '';
+  }
+
+  // Info
+  modalCat.innerHTML = `<span class="ja">${labels.ja}</span><span class="en hidden">${labels.en}</span>`;
+  modalTitleEl.innerHTML = `<span class="ja">${work.title_ja}</span><span class="en hidden">${work.title_en}</span>`;
+  modalYearEl.textContent = work.year;
+
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  setLang(currentLang);
+}
+
+function closeModal() {
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+modal.addEventListener('click', (e) => {
+  if (e.target.closest('.modal-backdrop') || e.target.closest('.modal-close')) closeModal();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
 // ── Render works from JSON ──
 async function renderWorks() {
   const grid = document.getElementById('works-grid');
@@ -154,6 +202,7 @@ async function renderWorks() {
           </div>
         </div>`;
 
+      article.addEventListener('click', () => openModal(work));
       grid.appendChild(article);
       observer.observe(article);
     });
