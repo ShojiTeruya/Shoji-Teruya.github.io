@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=9">
 
   <!-- JSON-LD 構造化データ -->
   <script type="application/ld+json">
@@ -69,8 +69,22 @@
       <li><a href="#works"   data-ja="作品"      data-en="Works">作品</a></li>
       <li><a href="#contact" data-ja="連絡"      data-en="Contact">連絡</a></li>
       <li><button id="lang-toggle" aria-label="言語切替">EN</button></li>
+      <li class="hamburger-li">
+        <button class="nav-hamburger" aria-label="メニュー" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </li>
     </ul>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav">
+      <a href="#about"   class="mobile-menu-link"><span class="ja">について</span><span class="en hidden">About</span></a>
+      <a href="#works"   class="mobile-menu-link"><span class="ja">作品</span><span class="en hidden">Works</span></a>
+      <a href="#contact" class="mobile-menu-link"><span class="ja">連絡</span><span class="en hidden">Contact</span></a>
+    </nav>
+  </div>
 
   <!-- Fog Intro -->
   <div id="fog-intro" aria-hidden="true">
@@ -243,6 +257,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=8"></script>
+  <script src="js/main.js?v=9"></script>
 </body>
 </html>

@@ -47,6 +47,32 @@ function setLang(lang) {
 
 langBtn.addEventListener('click', () => setLang(currentLang === 'ja' ? 'en' : 'ja'));
 
+// ── Mobile Menu ──
+const hamburger  = document.querySelector('.nav-hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+
+function openMobileMenu() {
+  hamburger.classList.add('is-active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  mobileMenu.classList.add('is-open');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  hamburger.classList.remove('is-active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.classList.remove('is-open');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.contains('is-open') ? closeMobileMenu() : openMobileMenu();
+});
+mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
 // ── Navigation state ──
 const nav = document.getElementById('nav');
 const hero = document.getElementById('top');
